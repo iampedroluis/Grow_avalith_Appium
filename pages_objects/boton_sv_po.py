@@ -20,7 +20,7 @@ class BotonScrolview:
         self.driver.find_element_by_xpath(xpath_btn_sv).click()
 
     def scroll(self):
-        self.driver.swipe(150, 400, 150, 200, 1000)
+        self.driver.swipe(400, 680, 350, 300, 1000)
 
     def btn_15(self):
         self.driver.find_element_by_xpath(xpath_btn_15).click()

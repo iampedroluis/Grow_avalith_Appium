@@ -11,29 +11,29 @@ from pages_objects.boton_fail_login_po import *
 #--------------TC1----------------------#
 
 
-@given('el usuario esta en la aplicacion')
+@given('the user is in the application')
 def abrir_app(context):
     Boton_ESV.conexion(context)
     time.sleep(3)
 
 
-@when('el usuario hace click en el boton enter some value')
+@when('the user clicks the enter some value button')
 def click_primer_boton(context):
     Boton_ESV.boton_esv(context)
     time.sleep(2)
 
 
-@when('escribe el primer valor')
+@when('write the first value')
 def escribe_valor(context):
     Boton_ESV.int_boton_esv(context)
 
 
-@when('le da click en submit')
+@when('click submit Button')
 def click_envi(context):
     Boton_ESV.click_sbmt(context)
 
 
-@then('se muestra el primer valor')
+@then('the first value is displayed')
 def primervalor(context):
     time.sleep(5)
     Boton_ESV.resultado(context)
@@ -43,193 +43,195 @@ def primervalor(context):
 
 #------------TC2-----------------#
 
-@given('estando el usuario en la aplicacion')
+@given('being the user in the application')
 def app_demo(context):
     Boton_CUF.conexion(context)
     time.sleep(3)
 
 
-@when('el usuario hace click en el boton contact us from')
+@when('the user clicks on the button contact us from')
 def step_impl(context):
     Boton_CUF.btoncuf(context)
     time.sleep(2)
 
 
-@when(u'completa los datos solicitados')
+@when('complete the requested data')
 def step_impl(context):
     Boton_CUF.int_botn_cuf(context)
     time.sleep(2)
 
 
-@when(u'hace click en submit')
+@when('click submit')
 def step_impl(context):
     Boton_CUF.click_submit(context)
     time.sleep(2)
 
 
-@then(u'se visualizan los datos cargados')
+@then('the loaded data is displayed')
 def step_impl(context):
     time.sleep(2)
 
 #--------- TEST CASE 3 -------
 
-@given('el usuario esta en la app')
+@given('the user is in the app')
 def step_impl(context):
     BotonScrolview.conexion(context)
     time.sleep(2)
 
 
-@when(u'hace click en el boton Scrollview')
+@when('click on the Scrollview button')
 def step_impl(context):
     BotonScrolview.btn_sv(context)
     time.sleep(2)
 
 
-@when(u'Hace scroll hacia abajo')
+@when('Scrolls down')
 def step_impl(context):
     BotonScrolview.scroll(context)
 
 
-@when(u'hace click en la opcion 15')
+@when('click on option number 09')
 def step_impl(context):
     BotonScrolview.btn_15(context)
 
 
-@when(u'hace click en yes')
+@when('click yes')
 def step_impl(context):
     BotonScrolview.btn_yes(context)
 
 
-@then(u'se muestra la ventana de home')
+@then('the home window is displayed')
 def step_impl(context):
     time.sleep(2)
 
 #------- TEST CASE 4 --- ------
 
-@given(u'el usuario ingreso en la app')
+@given(u'the user entered the app')
 def step_impl(context):
     Boton_ta.conexion(context)
     time.sleep(3)
 
-@when(u'hace click en el boton Tab Activity')
+@when(u'click on the Tab Activity button')
 def step_impl(context):
     Boton_ta.btn_ta(context)
 
 
-@when(u'hace scroll en forma horizontal')
+@when(u'scrolls horizontally')
 def step_impl(context):
+    Boton_ta.scroll(context)
+    time.sleep(2)
     Boton_ta.scroll(context)
     time.sleep(2)
     Boton_ta.scroll(context)
 
 
-@when(u'hace click en las diferentes casillas')
+@when(u'click on the different boxes')
 def step_impl(context):
      Boton_ta.btn_home(context)
      Boton_ta.btn_movie(context)
 
 
-@then(u'puede navegar por las diferentes secciones')
+@then(u'you can browse the different sections')
 def step_impl(context):
     Boton_ta.btn_sport(context)
 
 #----- TEST CASE 5 -------
 
-@given(u'ingreso en app')
+@given(u'login in app')
 def step_impl(context):
     Boton_Zoom.conexion(context)
     time.sleep(2)
 
-@when(u'hace click en el boton zoom')
+@when(u'click on the zoom button')
 def step_impl(context):
    Boton_Zoom.btn_zoom(context)
 
-@then(u'Se visualiza el logo haciendo zoom')
+@then(u'The logo is displayed by zooming')
 def step_impl(context):
     time.sleep(5)
 
 
 #--------------- test case 6 -------#
 
-@given(u'estando en la aplicacion')
+@given(u'being in the application')
 def step_impl(context):
     Boton_Login.conexion(context)
 
 
 
-@when(u'hace click en el boton login')
+@when(u'click on the login button')
 def step_impl(context):
     Boton_Login.btn_login(context)
 
 
-@when(u'completa los datos de email y passw')
+@when(u'complete the email and passw information')
 def step_impl(context):
     Boton_Login.emailpassw(context)
 
 
 
-@when(u'hace click en login')
+@when(u'click on login')
 def step_impl(context):
     Boton_Login.login(context)
 
 
-@when(u'escribe admin en el campo requerido')
+@when(u'write admin in the required field')
 def step_impl(context):
    Boton_Login.text_admin(context)
 
 
-@when(u'hace click en el boton de submit')
+@when(u'click on the submit button')
 def step_impl(context):
     Boton_Login.btn_submt_login(context)
 
 
-@then(u'se ve la palabra Admin en la pantalla')
+@then(u'you see the word Admin on the screen')
 def step_impl(context):
     time.sleep(2)
 
 
 #------- TEST CASE 7 --------#
 
-@given(u'aplicacion mobile demo')
+@given(u'mobile demo application')
 def step_impl(context):
     Boton_Crash.conexion(context)
     time.sleep(2)
 
-@when(u'el usuario hace scroll hacia la parte inferion')
+@when(u'the user scrolls to the bottom')
 def step_impl(context):
     Boton_Crash.scroll(context)
     time.sleep(2)
-@when(u'hace click en el boton crash')
+@when(u'click on the crash button')
 def step_impl(context):
     Boton_Crash.btn_crash(context)
 
-@then(u'sale de la aplicacion')
+@then(u'exit the application')
 def step_impl(context):
     time.sleep(3)
 
 #------ TEST FAIL ------#
-@given(u'usuario un app mobile')
+@given(u'user a mobile app')
 def step_impl(context):
     Boton_Login.conexion(context)
 
 
 
-@when(u'el usuario hace click en login boton')
+@when(u'user clicks login button')
 def step_impl(context):
     Boton_Login.btn_login(context)
 
 
-@when(u'no coloca las credenciales')
+@when(u'do not put the credentials')
 def step_impl(context):
     time.sleep(2)
 
 
 
-@when(u'hace click en login sin credenciales')
+@when(u'clicks login without credentials')
 def step_impl(context):
     Boton_Login.login(context)
 
-@then(u'le deja iniciar sesion')
+@then(u'lets you log in')
 def step_impl(context):
     Boton_Login_fail.resultado(context)
 

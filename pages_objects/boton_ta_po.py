@@ -20,7 +20,7 @@ class Boton_ta:
         self.driver.find_element_by_xpath(xpath_btn_ta).click()
 
     def scroll(self):
-        self.driver.swipe(877, 1290, 168, 1276, 1000)
+        self.driver.swipe(1000, 1300, 200, 1276, 1000)
 
     def btn_sport(self):
         self.driver.find_element_by_xpath(xpath_btn_sport).click()
